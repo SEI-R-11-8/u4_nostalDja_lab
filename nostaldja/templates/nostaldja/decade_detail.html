@@ -1,0 +1,13 @@
+<h2>{{decade.start_year}}<a href="{% url 'decade_edit' pk=decade.pk %}">[Edit]</a></h2>
+
+<a href="{% url 'decade_delete' pk=decade.pk %}">Delete</a>
+
+<h3>Fads <a href="{% url 'fad_create' %}">(+)</a></h3>
+
+<ul>
+    {% for fad in decade.fad.all %}
+    <li>
+        <a href="{% url 'fad_detail' pk=fad.pk %}">{{fad.name}}</a>
+    </li>
+    {% endfor %}
+</ul>

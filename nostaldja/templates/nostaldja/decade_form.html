@@ -1,0 +1,5 @@
+<h2>Add a NEW Decade</h2>
+<form method='POST' class='decade-form'>
+    {% csrf_token %} {{form.as_p}}
+    <button type='submit' class='decade-form btn'>Save</button>
+</form>

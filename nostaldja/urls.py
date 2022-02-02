@@ -14,7 +14,7 @@ urlpatterns = [
     path('decades/new', views.decade_create, name='decade_create'),
     path('fads/new', views.fad_create, name='fad_create'),
 
-    # EDIT
+    # UPDATE
     path('decades/<int:pk>/edit', views.decade_edit, name='decade_edit'),
     path('fads/<int:pk>/edit', views.fad_edit, name='fad_edit'),
 
