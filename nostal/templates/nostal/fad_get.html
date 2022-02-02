@@ -1,0 +1,18 @@
+
+<div>
+    <nav>
+        <a href="/fads">Fads</a>
+        <a href="/">Decade</a>
+    </nav>
+    <h2>Fads</h2>
+    <div>
+        <a href="{% url 'fad_create' %}">add</a>
+    </div>
+    {% for e in fad %}
+    <li>
+        <a href="{% url 'fad_detail' pk=e.pk %}">{{e.name}}</a>
+        
+    </li>
+    
+    {% endfor %}
+</div>
