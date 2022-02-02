@@ -1,0 +1,12 @@
+<nav>
+    <a href="/fads">Fads</a>
+    <a href="/">Decade</a>
+</nav>
+<div>
+    <h3>{{fad.name}}</h3>
+    <a href="{% url 'fad_edit' pk=fad.pk %}">edit</a>
+    <img src="{{fad.image_url}}" alt="" width="500px">
+    <h3>{{fad.decade.start_year}}</h3>
+    <p>{{fad.description}}</p>
+    <a href="{% url 'fad_delete' pk=fad.pk %}">Delete</a>
+</div>
