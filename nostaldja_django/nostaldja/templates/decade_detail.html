@@ -1,0 +1,7 @@
+{% extends 'nostaldja/base.html' %} {% block content %}
+
+<h2>{{ decade.start_year }} <a href="{% url 'decade_edit' pk=decade.pk %}">(edit)</a></h2>
+<h3>By: {{ decade.start_year }}</h3>
+<a href="{% url 'decade_delete' pk=decade.pk %}">Delete</a>
+Decade: {{ decade.start_year }}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+  <head>
+    <title>Nostaldja</title>
+    <link rel="stylesheet" href="{% static 'css/nostaldja.css' %}" />
+  </head>
+  <body>
+    <h1>Nostal.Dja</h1>
+    <nav>
+      <a href="/decade">Decades</a>
+      <a href="/">Fads</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>

@@ -43,4 +43,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(seed, fallow)
     ]
