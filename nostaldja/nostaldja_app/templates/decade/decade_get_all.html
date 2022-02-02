@@ -3,7 +3,7 @@
 <ul>
     {% for decade in decades %}
     <li>
-        <p>{{ decade.start_year }}</p>
+        <a href="{{ decade.id }}/fads">{{ decade.start_year}}</a>
     </li>
     {% endfor %}
 </ul>

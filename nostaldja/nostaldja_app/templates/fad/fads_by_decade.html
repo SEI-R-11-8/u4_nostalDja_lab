@@ -1,10 +1,13 @@
 {% extends '../base.html' %} {% block content %}
 <h2>{{ decade.start_year }} Fads</h2>
+<h4><a href="{% url 'fad_create' %}">New Fad</a></h4>
 <ul>
     {% for fad in fads %}
     <li>
         <h4>{{ fad.name }}</h4>
         <img src="{{ fad.image_url }}" alt="{{ fad.name }}"/>
+        <a href="{% url 'fad_edit' id=fad.id %}">Edit</a>
+        <a href="{% url 'fad_delete' id=fad.id %}">Delete</a>
         <p>{{ fad.description }}</p>
     </li>
     {% endfor %}
