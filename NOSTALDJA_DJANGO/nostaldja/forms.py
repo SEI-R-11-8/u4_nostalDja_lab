@@ -8,6 +8,7 @@ class DecadeForm(forms.ModelForm):
     fields = ('start_year',)
 
 class FadForm(forms.ModelForm):
+  decade = forms.ModelChoiceField(queryset=Decade.objects.order_by('start_year'))
 
   class Meta:
     model = Fad

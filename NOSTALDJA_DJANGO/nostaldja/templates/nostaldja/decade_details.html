@@ -1,7 +1,7 @@
 {% extends 'nostaldja/base.html' %} {% block content %}
-<h2>{{ decade.start_year }} <a href="">(edit)</a></h2>
+<h2>{{ decade.start_year }} <a href="{% url 'decade_edit' pk=decade.pk %}">(edit)</a></h2>
 
-<h3>Fads <a href="">(+)</a></h3>
+<h3>Fads <a href="{% url 'fad_create' %}">(+)</a></h3>
 <ul>
   {% for fad in decade.fads.all %}
   <li>
@@ -10,6 +10,6 @@
   {% endfor %}
 </ul>
 
-<h4><a href="">Delete Decade</a></h4>
+<h4><a href="{% url 'decade_delete' pk=decade.pk %}">Delete Decade</a></h4>
 
 {% endblock %}
