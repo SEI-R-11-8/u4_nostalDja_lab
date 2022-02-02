@@ -4,10 +4,9 @@ from django.db import models
 
 class Decade(models.Model):
   # name=models.CharField(max_lenght=100)
-  name = models.CharField(max_length=100)
   start_year=models.CharField(max_length=10)
   def __str__(self):
-    return self.name
+    return self.start_year
 
 class Fad(models.Model):
   decade= models.ForeignKey(Decade, on_delete=models.CASCADE, related_name='fads')

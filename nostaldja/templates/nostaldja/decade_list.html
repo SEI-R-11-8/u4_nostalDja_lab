@@ -3,7 +3,7 @@
 <h2>Decades<a href="{%url 'decade_create' %}">(+)</a></h2>
 <div class="decade-container">
   {% for decade in decades %}
-  <a href="{%url 'decade_detail' %}">
+  <a href="{% url 'decade_detail' pk=decade.pk %}">
     <div class="decade-card">
     {{decade.start_year}}
     </div>

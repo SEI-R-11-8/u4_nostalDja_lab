@@ -1,13 +1,10 @@
 {% extends 'nostaldja/base.html' %} {% block content %}
-<h2>{{ fad.name }} <a href="">(edit)</a></h2>
+<h2>{{ fad.name }} <a href="{% url 'fad_edit' pk=fad.pk %}"">(edit)</a></h2>
 <h3>Decade: {{ fad.decade}}</h3>
 <img src="{{fad.image_url}}"/>"
 <p>{{fad.description}}
 <a href="{% url 'fad_delete' pk=fad.pk %}">Delete</a>
 
 
-  decade= models.ForeignKey(Decade, on_delete=models.CASCADE, related_name='fads')
-  name=models.CharField(max_length=100)
-  image_url= models.CharField(max_length=200, null=True)
-  description= models.CharField(max_length=400, null=True)
+
 {% endblock %}

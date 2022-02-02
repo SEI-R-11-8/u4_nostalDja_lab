@@ -14,12 +14,12 @@ def fad_list(request):
   return render(request, 'nostaldja/fad_list.html', {'fads': fads})
 
 # list detail
-def decade_detail(request):
-  decade = Decade.objects.all()
+def decade_detail(request, pk):
+  decade = Decade.objects.get(id=pk)
   return render(request, 'nostaldja/decade_detail.html', {'decade': decade})
 
-def fad_detail(request):
-  fad = Fad.objects.all()
+def fad_detail(request, pk):
+  fad = Fad.objects.get(id=pk)
   return render(request, 'nostaldja/fad_detail.html', {'fad': fad})
 
 # creat routes 
@@ -41,7 +41,7 @@ def fad_create(request):
             return redirect('fad_detail', pk=fad.pk)
     else:
         form = FadForm()
-    return render(request, 'nostaldja/fad_form.html', {'fad': form})
+    return render(request, 'nostaldja/fad_form.html', {'form': form})
 
 # edit routes
 def decade_edit(request, pk):
@@ -58,12 +58,12 @@ def decade_edit(request, pk):
 def fad_edit(request, pk):
     fad = Fad.objects.get(pk=pk)
     if request.method == "POST":
-        form = FadForm(request.POST, instance=decade)
+        form = FadForm(request.POST, instance=fad)
         if form.is_valid():
             fad = form.save()
-            return redirect('fad_detail', pk=decade.pk)
+            return redirect('fad_detail', pk=fad.pk)
     else:
-        form = FadForm(instance=decade)
+        form = FadForm(instance=fad)
     return render(request, 'nostaldja/fad_form.html', {'form': form})
 
 # delete routes
