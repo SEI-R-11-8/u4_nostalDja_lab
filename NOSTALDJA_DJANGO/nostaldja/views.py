@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Decade, Fad
+from .forms import DecadeForm, FadForm
 
 # Create your views here.
 
 def decade_list(req):
-  decades = Decade.objects.all()
+  decades = Decade.objects.all().order_by('start_year')
   return render(req, 'nostaldja/decade_list.html', {'decades': decades})
 
 def fad_list(req):
@@ -18,3 +19,13 @@ def decade_details(req, pk):
 def fad_details(req, pk):
   fad = Fad.objects.get(id=pk)
   return render(req, 'nostaldja/fad_details.html', {'fad': fad})
+
+def decade_create(req):
+  if req.method == 'POST':
+    form = DecadeForm(req.POST)
+    if form.is_valid():
+      decade = form.save()
+      return redirect('decade_detail', pk=decade.pk)
+  else:
+    form = DecadeForm()
+  return render(req, 'nostaldja/decade_form.html', {'form': form})
