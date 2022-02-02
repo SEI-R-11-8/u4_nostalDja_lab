@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+  <head>
+    <title>Nostadja</title>
+<!--     <link rel="stylesheet" href="{% static 'css/tunr.css' %}" /> -->
+  </head>
+  <body>
+    <h1>Nostadja</h1>
+    <nav>
+      <a href="/fads">fads</a>
+      <a href="/">Decades</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>
