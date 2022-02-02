@@ -1,0 +1,5 @@
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h2>{{ fad.name }} <a href="{% url 'fad_edit' pk=fad.pk %}">(edit)</a></h2>
+<h3>During: {{ fad.decade.start_year }}</h3>
+<a href="{% url 'song_delete' pk=song.pk %}">Delete</a>
+{% endblock %}
