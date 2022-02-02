@@ -1,0 +1,44 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  max-width: 50em;
+  margin: auto;
+  padding: 2em 1em;
+}
+
+nav a {
+  border: 1px solid black;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #eeeeee;
+}
+
+nav a:hover {
+  background-color: orange;
+  color: blue;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  background-color: #ccc;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 0.25em;
+}
+
+h1 {
+  font: inherit;
+  color: inherit;
+  letter-spacing: -0.05em;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
