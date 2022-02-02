@@ -1,0 +1,10 @@
+{% extends '../base.html' %} {% block content %}
+<h2>Decades</h2>
+<ul>
+    {% for decade in decades %}
+    <li>
+        <p>{{ decade.start_year }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

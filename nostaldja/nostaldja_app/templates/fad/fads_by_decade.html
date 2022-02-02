@@ -1,0 +1,12 @@
+{% extends '../base.html' %} {% block content %}
+<h2>{{ decade.start_year }} Fads</h2>
+<ul>
+    {% for fad in fads %}
+    <li>
+        <h4>{{ fad.name }}</h4>
+        <img src="{{ fad.image_url }}" alt="{{ fad.name }}"/>
+        <p>{{ fad.description }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
