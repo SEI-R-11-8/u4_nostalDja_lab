@@ -1,0 +1,10 @@
+<h2>Fads:</h2>
+<ul>
+  {% for fads in fad %}
+  <li>
+    <a href="{% url 'fad_detail' pk=fad.pk %}">
+      {{ fads.name }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

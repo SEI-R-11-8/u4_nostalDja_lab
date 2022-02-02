@@ -1,0 +1,9 @@
+
+<h2>decades <a href="{% url 'decade_create' %}">(+)</a></h2>
+<ul>
+  {% for decades in decade %}
+  <li>
+    <a href="{% url 'decade_detail' pk=decade.pk %}">{{ decades.start_year}}</a>
+  </li>
+  {% endfor %}
+</ul>
