@@ -2,15 +2,20 @@
 <html>
   <head>
     <title>Nostaldja</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/nostaldja.css' %}" />
   </head>
   <body>
-    <h1>Nostaldja</h1>
-    <h4>Through the Decades</h4>
-    <nav>
-      <a href="/">Decades</a>
-      <a href="/fads">Fads</a>
-    </nav>
-    {% block content %} {% endblock %}
+    <header>
+      <h1>Nostaldja</h1>
+      <h4 class="subtitle">Through the Decades</h4>
+    </header>
+      <nav>
+        <a href="/">Decades</a>
+        <a href="/fads">Fads</a>
+      </nav>
+    <div class="main">
+      {% block content %} {% endblock %}
+    </div>
   </body>
 </html>

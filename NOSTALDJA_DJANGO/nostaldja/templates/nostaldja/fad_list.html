@@ -1,5 +1,5 @@
 {% extends 'nostaldja/base.html' %} {% block content %}
-<h2>Fads <a href="{% url 'fad_create' %}">(+)</a></h2>
+<h2>Fads</h2>
 <ul>
   {% for fad in fads %}
   <li>
@@ -7,4 +7,5 @@
   </li>
   {% endfor %}
 </ul>
+<h4><a href="{% url 'fad_create' %}">Add a Fad</a></h4>
 {% endblock %}
