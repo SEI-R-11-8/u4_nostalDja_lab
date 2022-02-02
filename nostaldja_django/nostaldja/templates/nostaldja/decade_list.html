@@ -1,9 +1,10 @@
-<!-- tunr/templates/tunr/artist_list.html -->
-<h2>Decades <a href="">(+)</a></h2>
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h2>Decades</h2>
 <ul>
   {% for decade in decades %}
   <li>
-    <a href="">{{ decade.start_year }}</a>
+    <a href="{% url 'decade_detail' pk=decade.pk %}">{{ decade.start_year }}</a>
   </li>
   {% endfor %}
 </ul>
+{% endblock %}
