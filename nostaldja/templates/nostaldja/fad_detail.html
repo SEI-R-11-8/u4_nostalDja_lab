@@ -1,0 +1,5 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Fad Details</h1>
+<h2>The Fad (<a href="{% url 'decade_detail' pk=fad.decade.pk %}">{{ fad.decade }}</a>): {{ fad.name }}</h2>
+<p>{{ fad.description }}</p>
+{% endblock %}
