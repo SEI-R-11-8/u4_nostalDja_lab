@@ -57,7 +57,7 @@ def decade_edit(request, pk):
         form = DecadeForm(request.POST, instance=decade)
         if form.is_valid():
             decade = form.save()
-            return redirect('decade_all', pk=decade.pk)
+            return redirect('decade_detail', pk=decade.pk)
     else:
         form = DecadeForm(instance=decade)
     return render(request, 'nostaldja/decade_form.html', {'form': form})
@@ -69,7 +69,7 @@ def fad_edit(request, pk):
         form = FadForm(request.POST, instance=fad)
         if form.is_valid():
             fad = form.save()
-            return redirect('fad_all', pk=fad.pk)
+            return redirect('fad_detail', pk=fad.pk)
     else:
         form = FadForm(instance=fad)
     return render(request, 'nostaldja/fad_form.html', {'form': form})
