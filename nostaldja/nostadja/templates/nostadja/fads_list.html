@@ -1,0 +1,11 @@
+{% extends 'nostadja/base.html' %} {% block content %}
+
+<h2>Fads</h2>
+<ul>
+  {% for fad in fads %}
+  <li>
+    <a href="{% url 'fads_detail' pk=fad.id %}">{{ fad.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

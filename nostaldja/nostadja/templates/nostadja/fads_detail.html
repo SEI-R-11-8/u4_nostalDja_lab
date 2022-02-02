@@ -1,0 +1,10 @@
+{% extends 'nostadja/base.html' %} {% block content %}
+
+<h2>{{ fads.name }} <a href="{% url 'fads_edit' pk=fads.pk %}">(edit)</a></h2>
+<img src="{{ fads.image_url }}" alt="" class="fads-photo" />
+<h3>Start Year: {{ fads.decade.start_year }}</h3>
+ <a href="{% url 'fads_delete' pk=fads.id %}">Delete</a>
+
+Description: {{ fads.description }}
+
+{% endblock %}
