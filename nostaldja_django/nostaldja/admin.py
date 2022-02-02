@@ -5,6 +5,6 @@ from .models import Decade, Fad
 
 
 # Register your models here.
+admin.site.register(Decade)
 
 admin.site.register(Fad)
-admin.site.register(Decade)

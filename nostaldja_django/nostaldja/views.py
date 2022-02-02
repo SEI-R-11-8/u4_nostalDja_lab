@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import DecadeForm, FadForm
+from .models import Decade, Fad
 
 # Create your views here.
-
-from .models import Decade, Fad
 
 
 def fad_create(request):
