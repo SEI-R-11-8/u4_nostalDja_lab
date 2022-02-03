@@ -1,0 +1,9 @@
+<!-- tunr/templates/tunr/artist_list.html -->
+<h2>decades <a href="">{{decade.name}}</a></h2>
+<ul>
+  {% for decade in decades %}
+  <li>
+    <a href="">{{ decade.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
