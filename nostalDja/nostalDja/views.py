@@ -46,3 +46,12 @@ def fad_create(request):
         form = FadForm()
     return render(request, 'nostalDja/fad_form.html', {'form': form})
 
+def decade_delete(request, pk):
+    decade.objects.get(id=pk).delete()
+    return redirect('decade_list')
+
+
+def fad_delete(request, pk):
+    Fad.objects.get(id=pk).delete()
+    return redirect('fad_list')
+    

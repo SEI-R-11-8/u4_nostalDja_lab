@@ -1,9 +1,10 @@
 <!-- tunr/templates/tunr/artist_detail.html -->
 <h2>{{ decades.name }}</h2>
 <ul>
-  {% for fads in decade.fads.all %}
+  {% for fads in decades.fads.all %}
   <li>
     <a href="">{{ fads.name }}</a>
   </li>
   {% endfor %}
 </ul>
+<a href=`{% url 'decade_delete' pk=decades.pk %}`>Delete</a>
