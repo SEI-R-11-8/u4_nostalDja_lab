@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tunr'
+    'nostaldja'
 ]
 
 MIDDLEWARE = [
@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'u4_nostalDja_lab.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tunr',
-        'USER': 'tunruser',
-        'PASSWORD': 'tunr',
+        'NAME': 'nostaldja',
+        'USER': 'nostaldjauser',
+        'PASSWORD': 'nostaldja',
         'HOST': 'localhost'
     }
 }
