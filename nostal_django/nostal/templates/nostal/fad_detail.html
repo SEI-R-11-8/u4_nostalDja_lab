@@ -1,0 +1,6 @@
+{% extends 'nostal/base.html' %} {% block content %}
+<h2>{{ fad.name }} <a href="{% url 'fad_edit' pk=fad.pk %}">(edit)</a></h2>
+<h3>By: {{ fad.decade.start_year }}</h3>
+
+Description: {{ fad.description }}
+{% endblock %}
