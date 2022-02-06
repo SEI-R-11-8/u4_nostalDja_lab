@@ -1,0 +1,9 @@
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h1>New Fad</h1>
+<form method="POST" class="fad-form">
+  <h3>{{fad.name}}</h3>
+  <img src="{{ fad.image_url }}" />
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %} 
